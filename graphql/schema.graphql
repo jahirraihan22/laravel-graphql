@@ -1,0 +1,13 @@
+# this is query
+type Query {
+    users: [User!]! @paginate(defaultCount: 10)
+    user(id: ID @eq): User @find
+}
+
+# this is table
+type User {
+    id: ID!
+    name: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
