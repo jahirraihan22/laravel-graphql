@@ -30,6 +30,9 @@ extend type Mutation {
         email: String!
         password: String!
     ): User! @upsert
+
+    # update image
+    updateUserImage(image: Upload!): String!
 }
 
 # this is model
@@ -40,4 +43,5 @@ type User {
     created_at: DateTime
     updated_at: DateTime
     posts: [Post]! @hasMany
+    image: String
 }
