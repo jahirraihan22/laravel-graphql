@@ -63,3 +63,9 @@ in **_graphql/schema.graphql_**
 to create custom mutation
 
     php artisan lighthouse:mutation TestMutation
+
+### activate middleware
+
+in **_config/lighthouse.php_**
+
+    'guard' => 'sanctum',
